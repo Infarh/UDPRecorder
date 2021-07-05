@@ -8,8 +8,9 @@ namespace UDPRecorder.ViewModels
     [Service(ServiceLifetime.Scoped)]
     public class MainWindowViewModel : TitledViewModel
     {
-        [Inject]
-        public IUserDialog UserDialog { get; init; }
+        [Inject] public IUserDialog UserDialog { get; init; }
+
+        [Inject] public IUdpRecorder UdpRecorder { get; init; }
 
         public MainWindowViewModel() => Title = "Главное окно программы";
 
